@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MyProject</string>
+    <string name="loading">loading...</string>
+    <string name="content_description_image_of_photo_post">Image of photo post</string>
+    <string name="refresh">Refresh</string>
+    <string name="open_drawer">Open Menu</string>
+    <string name="close_drawer">Close Menu</string>
+    <string name="title_shop">Shop</string>
+    <string name="title_FoodMenu">Recipe</string>
+    <string name="title_gifts">Gifts</string>
+    <string name="title_cart">Cart</string>
+    <string name="title_profile">Profile</string>
+    <string name="request_client_id">708392568525-ilajp2f69g5huknbao0a86rhc0due9mm.apps.googleusercontent.com</string>
+    <string name="title_activity_maps_fragment">Map</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

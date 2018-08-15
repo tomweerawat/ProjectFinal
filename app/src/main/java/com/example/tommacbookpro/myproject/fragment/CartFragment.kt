@@ -22,11 +22,20 @@ import kotlinx.android.synthetic.main.fragment_cart.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import android.R.attr.data
+import com.example.tommacbookpro.myproject.activity.DetailActivity
+import android.content.Intent
+
+
 
 
 class CartFragment : Fragment(), ClickListener {
     override fun itemClicked(view: View?, position: Int) {
-        Toast.makeText(Contextor.getInstance().context, "Position$position", Toast.LENGTH_SHORT).show()
+        Toast.makeText(Contextor.getInstance().context, "Hello$position", Toast.LENGTH_SHORT).show()
+        val i = Intent(activity, DetailActivity::class.java)
+        i.putExtra("position",position)
+        i.putParcelableArrayListExtra("detail", ArrayList(collectionX))
+        startActivity(i)
     }
 
     val collectionX : MutableList<CollectionX> = ArrayList()
@@ -40,6 +49,7 @@ class CartFragment : Fragment(), ClickListener {
         }
     }
     val TAG:String = "CartFragment"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }

@@ -28,6 +28,7 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".activity.HomeMenuActivity" />
         <activity android:name=".activity.LoginFirebase" />
+        <activity android:name=".activity.DetailActivity"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

@@ -30,6 +30,15 @@ class LoginFirebase : BaseActivity(), GoogleApiClient.OnConnectionFailedListener
     companion object {
         var mGoogleApiClient: GoogleApiClient? = null
         var mAuth: FirebaseAuth? = null
+
+        public fun signOut() {
+            // sign out Firebase
+            mAuth!!.signOut()
+
+            // sign out Google
+            Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback { }
+
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -187,6 +196,8 @@ class LoginFirebase : BaseActivity(), GoogleApiClient.OnConnectionFailedListener
         val currentUser = mAuth!!.currentUser
         Log.e("CurrentUser","CurrentUser"+currentUser)
     }
+
+
     private fun signOut() {
         // sign out Firebase
         mAuth!!.signOut()
@@ -195,5 +206,7 @@ class LoginFirebase : BaseActivity(), GoogleApiClient.OnConnectionFailedListener
         Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback { }
 
     }
+
+
 
 }
